@@ -1,0 +1,226 @@
+body {
+  background-color: #FBFBFB;
+  margin-top: 50px;
+  height: 100%;
+  font-family: Tahoma;
+}
+
+a {
+  text-decoration: none;
+}
+
+img:hover {
+  background-color: #DBDCDE;
+  border-radius: 5px;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* NAV BAR ----------------------------------------------- */
+
+@media screen and (max-width:549px){
+  nav {
+    position: relative;
+    background-color: #e6e7e8;
+
+    height: 40px;
+    width: 100%;
+
+    box-shadow: 0 0 5px 2px #DBDCDE;
+    padding-bottom: 9px;
+
+    margin-top: -50px;
+    margin-left: -8px;
+  }
+}
+
+@media screen and (min-width:550px){
+  nav {
+    position: fixed;
+    background-color: #e6e7e8;
+
+    height: 40px;
+    width: 100%;
+
+    box-shadow: 0 0 5px 2px #DBDCDE;
+    padding-bottom: 9px;
+
+    top:0;
+    left:0;
+  }
+}
+
+/* NAV BAR ELEMENTS -------------------- */
+
+.menu-item {
+  width: 120px;
+  float:right;
+  color: #666;
+  text-align:center;
+  font-size: 16px;
+  margin-top: -16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-left: 1px solid #DDD;
+}
+
+.menu-item:hover {
+  background-color: #DBDCDE;
+}
+
+.home {
+  font-size: 2.25em;
+  font-weight: 100;
+  z-index: 1;
+  color: #2f2f2f;
+  padding: 2px 17px 4px 17px;
+  float:left;
+  border-right: 1px solid #DDD;
+}
+
+.home:hover {
+  background-color: #DBDCDE;
+}
+
+/* MAIN CONTENT ---------------------------- */
+
+main {
+  width: 100%;
+  margin: 0;
+  min-height: 100%;
+}
+
+/* MAIN NOTES LIST ------------------------- */
+
+.note-box {
+  float: left;
+  width: 58%;
+  margin: 5%;
+}
+
+.note-img {
+  width: 50%;
+  padding: 25%;
+  height: auto;
+}
+
+.note {
+  display: inline-block;
+  margin: 5px auto;
+}
+
+/* one column w/o sidebar */
+@media screen and (max-width:549px) {
+  .note-box {
+    width: 90%;
+    margin: 5% auto;
+  }
+}
+
+/* one column w/ sidebar */
+@media screen and (min-width:550px) and (max-width:783px){
+  .note-box {
+    width: 40%;
+    margin: 5% 10%;
+  }
+
+  .note {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* two column  */
+@media screen and (min-width:784px) and (max-width:1170px){
+  .note {
+    width: 45%;
+    height: auto;
+  }
+}
+/* three column */
+@media screen and (min-width:1171px){
+  .note {
+    width: 30%;
+    height: auto;
+  }
+}
+
+/* four column */
+@media screen and (min-width: 1300px) {
+  .note {
+    width: 22.5%;
+    height: auto;
+  }
+}
+
+/* INFO ASIDE ----------------------------- */
+
+/* side bar when window is minimum size of 550px */
+@media screen and (min-width:550px) {
+  .info {
+    position: fixed;
+    float: right;
+    right: 0;
+    height: 100%;
+    margin: 0;
+    background-color: #DDD;
+    box-shadow: 0 0 5px 2px #DDD;
+    z-index: 5;
+  }
+}
+
+/* ... otherwise hide side bar */
+@media screen and (max-width:549px) {
+  .info {
+    display: none;
+  }
+}
+
+/* one column */
+@media screen and (max-width:900px) {
+  .info {
+    width: 300px;
+  }
+}
+
+/* two column */
+@media screen and (min-width:901px) and (max-width:1171px) {
+  .info {
+    width: 34%;
+  }
+}
+
+/* three and column */
+@media screen and (min-width:1172px) {
+  .info {
+    width: 400px;
+  }
+}
+
+
+/* FOOTER --------------------------------- */
+
+
+footer {
+  position: relative;
+  clear: both;
+  height: 175px;
+  width: 100%;
+  bottom: 0;
+  background-color: #e6e7e8;
+  box-shadow: 0 0 5px 2px #DBDCDE;
+  z-index: 100;
+}
+
+/* SIGN UP PAGE --------------------------- */
+
+.signup-box {
+  position: relative;
+  width: 360px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #DBDCDE;
+}
