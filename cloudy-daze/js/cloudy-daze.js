@@ -21,12 +21,24 @@ effect.setSize( window.innerWidth, window.innerHeight );
 
 /************* TODO: Generate Your VR Scene Below *********************/
 
+var floor = new THREE.Mesh(
+  new THREE.PlaneBufferGeometry ( 10000, 10000, 1,1),
+  new THREE.MeshBasicMaterial({
+    color: 0x00dead,
+    side: THREE.DoubleSide,
+    map: new THREE.ImageUtils.loadTexture(
+        "assets/floor.png"
+      )
+  }));
+floor.rotation.x = Math.PI/2;
+floor.position.y = -100;
+scene.add(floor);
 
 var particleCount = 1800,
     particles = new THREE.Geometry(),
     pMaterial = new THREE.PointCloudMaterial({
       color: 0xFFFFFF,
-      size: 20,
+      size: 10,
       map: new THREE.ImageUtils.loadTexture(
           "assets/particle.png"
         ),
@@ -38,7 +50,7 @@ var particleCount = 1800,
 
 for (var p = 0; p < particleCount; p++) {
   var pX = Math.random() * 800 - 500,
-      pY = Math.random() * 500,
+      pY = Math.random() * 500 - 200,
       pZ = Math.random() * 800 - 500,
       particle = new THREE.Vector3( pX, pY, pZ );
   particle.velocity = {};
