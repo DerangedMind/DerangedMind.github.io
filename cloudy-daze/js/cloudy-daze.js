@@ -30,8 +30,8 @@ var particleCount = 1800,
       // map: new THREE.TextureLoader().load(
       //     "assets/particle.png"
       //   ),
-      blending: THREE.AdditiveBlending,
-      transparent:true
+      //blending: THREE.AdditiveBlending,
+      //transparent:true
 
     });
 
