@@ -38,7 +38,7 @@ var particleCount = 1800,
 
 for (var p = 0; p < particleCount; p++) {
   var pX = Math.random() * 800 - 500,
-      pY = Math.random() * 500 - 250,
+      pY = Math.random() * 500,
       pZ = Math.random() * 800 - 500,
       particle = new THREE.Vector3( pX, pY, pZ );
   particle.velocity = {};
