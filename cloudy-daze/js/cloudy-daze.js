@@ -27,11 +27,11 @@ var particleCount = 1800,
     pMaterial = new THREE.PointsMaterial({
       color: 0xFFFFFF,
       size: 20,
-      // map: new THREE.TextureLoader().load(
-      //     "assets/particle.png"
-      //   ),
-      //blending: THREE.AdditiveBlending,
-      //transparent:true
+      map: new THREE.TextureLoader().load(
+          "assets/particle.png"
+        ),
+      blending: THREE.AdditiveBlending,
+      transparent:true
 
     });
 
@@ -61,7 +61,7 @@ Request animation frame loop function
 */
 function animate() {
 
-  // particleSystem.rotation.y += 0.005;
+  particleSystem.rotation.y += 0.005;
   var particle = new THREE.Vector3();
   var pCount = particleCount;
   while (pCount--) {
@@ -74,13 +74,13 @@ function animate() {
       particle.velocity.y = 0;
     }
 
-    //particle.velocity.y -= Math.random() * 0.1;
+    particle.velocity.y -= Math.random() * 0.1;
 
-    //particle.y += particle.velocity.y;
+    particle.y += particle.velocity.y;
 
   }
 
-  // particles.verticesNeedUpdate = true;
+  particles.verticesNeedUpdate = true;
 
   //Update VR headset position and apply to camera.
   controls.update();
