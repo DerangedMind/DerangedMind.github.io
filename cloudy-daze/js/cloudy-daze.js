@@ -34,13 +34,13 @@ floor.rotation.x = Math.PI/2;
 floor.position.y = -100;
 scene.add(floor);
 
-var particleCount = 1800,
+var particleCount = 2400,
     particles = new THREE.Geometry(),
     pMaterial = new THREE.PointCloudMaterial({
       color: 0xFFFFFF,
       size: 10,
       map: new THREE.ImageUtils.loadTexture(
-          "assets/particle.png"
+          "assets/raindrop.png"
         ),
       blending: THREE.AdditiveBlending,
       transparent:true
