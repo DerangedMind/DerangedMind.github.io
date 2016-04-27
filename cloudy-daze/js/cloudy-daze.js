@@ -61,7 +61,7 @@ Request animation frame loop function
 */
 function animate() {
 
-  particleSystem.rotation.y += 0.005;
+  // particleSystem.rotation.y += 0.005;
   var particle = new THREE.Vector3();
   var pCount = particleCount;
   while (pCount--) {
