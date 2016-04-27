@@ -34,7 +34,7 @@ floor.rotation.x = Math.PI/2;
 floor.position.y = -100;
 scene.add(floor);
 
-var particleCount = 2400,
+var particleCount = 1800,
     particles = new THREE.Geometry(),
     pMaterial = new THREE.PointCloudMaterial({
       color: 0xFFFFFF,
