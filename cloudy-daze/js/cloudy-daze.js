@@ -80,7 +80,7 @@ function animate() {
 
   }
 
-  particles.verticesNeedUpdate = true;
+  // particles.verticesNeedUpdate = true;
 
   //Update VR headset position and apply to camera.
   controls.update();
