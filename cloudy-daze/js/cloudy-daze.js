@@ -25,7 +25,7 @@ effect.setSize( window.innerWidth, window.innerHeight );
 
 var imagePrefix = "assets/skybox_beach/";
 var directions  = ["posx", "negx", "posy", "negy", "posz", "negz"];
-var imageSuffix = ".png";
+var imageSuffix = ".jpg";
 
 var skyGeometry = new THREE.BoxGeometry( 5000, 5000, 5000 );
 
@@ -50,7 +50,7 @@ var floor = new THREE.Mesh(
   }));
 floor.rotation.x = Math.PI/2;
 floor.position.y = -100;
-scene.add(floor);
+// scene.add(floor);
 
 var particleCount = 1800,
     particles = new THREE.Geometry(),
