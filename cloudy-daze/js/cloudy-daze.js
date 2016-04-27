@@ -24,10 +24,10 @@ effect.setSize( window.innerWidth, window.innerHeight );
 
 var particleCount = 1800,
     particles = new THREE.Geometry(),
-    pMaterial = new THREE.PointsMaterial({
+    pMaterial = new THREE.PointCloudMaterial({
       color: 0xFFFFFF,
       size: 20,
-      map: new THREE.TextureLoader().load(
+      map: new THREE.ImageUtils.loadTexture(
           "assets/particle.png"
         ),
       blending: THREE.AdditiveBlending,
@@ -48,7 +48,7 @@ for (var p = 0; p < particleCount; p++) {
   );
 }
 
-var particleSystem = new THREE.Points(
+var particleSystem = new THREE.PointCloud(
   particles,
   pMaterial
 );
