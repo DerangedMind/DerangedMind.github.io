@@ -86,7 +86,7 @@ function animate() {
       particle.velocity.y = 0;
     }
 
-    particle.velocity.y -= Math.random() * 0.1;
+    particle.velocity.y -= Math.random() * 0.2;
 
     particle.y += particle.velocity.y;
 
