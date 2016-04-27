@@ -27,9 +27,9 @@ var particleCount = 1800,
     pMaterial = new THREE.PointsMaterial({
       color: 0xFFFFFF,
       size: 20,
-      map: new THREE.TextureLoader().load(
-          "assets/particle.png"
-        ),
+      // map: new THREE.TextureLoader().load(
+      //     "assets/particle.png"
+      //   ),
       blending: THREE.AdditiveBlending,
       transparent:true
 
