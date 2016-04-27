@@ -61,26 +61,26 @@ Request animation frame loop function
 */
 function animate() {
 
-  // particleSystem.rotation.y += 0.005;
-  // var particle = new THREE.Vector3();
-  // var pCount = particleCount;
-  // while (pCount--) {
-  //
-  //   particle = particles.vertices[pCount];
-  //
-  //
-  //   if (particle.y < -200) {
-  //     particle.y = 200;
-  //     particle.velocity.y = 0;
-  //   }
-  //
-  //   particle.velocity.y -= Math.random() * 0.1;
-  //
-  //   particle.y += particle.velocity.y;
-  //
-  // }
-  //
-  // particles.verticesNeedUpdate = true;
+  particleSystem.rotation.y += 0.005;
+  var particle = new THREE.Vector3();
+  var pCount = particleCount;
+  while (pCount--) {
+
+    particle = particles.vertices[pCount];
+
+
+    if (particle.y < -200) {
+      particle.y = 200;
+      particle.velocity.y = 0;
+    }
+
+    particle.velocity.y -= Math.random() * 0.1;
+
+    particle.y += particle.velocity.y;
+
+  }
+
+  particles.verticesNeedUpdate = true;
 
   //Update VR headset position and apply to camera.
   controls.update();
