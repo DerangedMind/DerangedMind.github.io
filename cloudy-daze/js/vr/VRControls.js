@@ -164,8 +164,9 @@ THREE.VRControls = function ( camera, speed, done ) {
 
 				this.manualMoveRate[1] = -20 * Math.round(controller.axes[0]);
 				this.manualMoveRate[0] =  20 * Math.round(controller.axes[1]);
-				this.manualRotateRate[1] = -1 * Math.round(controller.axes[2]);
-				this.manualRotateRate[0] = -1 * Math.round(controller.axes[5]);
+				// this.manualMoveRate[2] = 20 * Math.round(controller.)
+				// this.manualRotateRate[1] = -1 * Math.round(controller.axes[2]);
+				// this.manualRotateRate[0] = -1 * Math.round(controller.axes[5]);
 			}
 		// }
 
