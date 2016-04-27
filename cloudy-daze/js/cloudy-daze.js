@@ -21,6 +21,24 @@ effect.setSize( window.innerWidth, window.innerHeight );
 
 /************* TODO: Generate Your VR Scene Below *********************/
 
+//skybox
+
+var imagePrefix = "assets/skybox_beach/";
+var directions  = ["posx", "negx", "posy", "negy", "posz", "negz"];
+var imageSuffix = ".png";
+
+var skyGeometry = new THREE.BoxGeometry( 5000, 5000, 5000 );
+
+var materialArray = [];
+for (var i = 0; i < 6; i++)
+	materialArray.push( new THREE.MeshBasicMaterial({
+		map: THREE.ImageUtils.loadTexture( imagePrefix + directions[i] + imageSuffix ),
+		side: THREE.BackSide
+	}));
+var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
+var skyBox = new THREE.Mesh( skyGeometry, skyMaterial );
+scene.add( skyBox );
+
 var floor = new THREE.Mesh(
   new THREE.PlaneBufferGeometry ( 10000, 10000, 1,1),
   new THREE.MeshBasicMaterial({
