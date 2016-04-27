@@ -162,8 +162,18 @@ THREE.VRControls = function ( camera, speed, done ) {
 			for (j in this.controllers) {
 				var controller = this.controllers[j];
 
+				if(controller.axes[0] <= 0) {
+					this.manualMoveRate[1] = 0;
+				}
+
+				if(controller.axes[1] <= 0) {
+					this.manualMoveRate[0] = 0;
+				}
+
 				this.manualMoveRate[1] = -20 * Math.round(controller.axes[0]);
 				this.manualMoveRate[0] =  20 * Math.round(controller.axes[1]);
+
+
 				// this.manualMoveRate[2] = 20 * Math.round(controller.)
 				// this.manualRotateRate[1] = -1 * Math.round(controller.axes[2]);
 				// this.manualRotateRate[0] = -1 * Math.round(controller.axes[5]);

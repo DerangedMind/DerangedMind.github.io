@@ -39,18 +39,30 @@ var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
 var skyBox = new THREE.Mesh( skyGeometry, skyMaterial );
 scene.add( skyBox );
 
+// Generate random noise texture
+var noiseSize = 256;
+var size = noiseSize * noiseSize;
+var data = new Uint8Array( 4 * size );
+for ( var i = 0; i < size * 4; i ++ ) {
+    data[ i ] = Math.random() * 255 | 0;
+}
+var dt = new THREE.DataTexture( data, noiseSize, noiseSize, THREE.RGBAFormat );
+dt.wrapS = THREE.RepeatWrapping;
+dt.wrapT = THREE.RepeatWrapping;
+dt.needsUpdate = true;
+
 var floor = new THREE.Mesh(
   new THREE.PlaneBufferGeometry ( 10000, 10000, 1,1),
-  new THREE.MeshBasicMaterial({
-    color: 0x00dead,
-    side: THREE.DoubleSide,
-    map: new THREE.ImageUtils.loadTexture(
-        "assets/floor.png"
-      )
-  }));
+  dt);
+  //  { color: 0x00dead,
+  //   side: THREE.DoubleSide,
+  //   map: new THREE.ImageUtils.loadTexture(
+  //       "assets/floor.png"
+  //     )}
+  // ));
 floor.rotation.x = Math.PI/2;
 floor.position.y = -100;
-// scene.add(floor);
+scene.add(floor);
 
 var particleCount = 1800,
     particles = new THREE.Geometry(),
