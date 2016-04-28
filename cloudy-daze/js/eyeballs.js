@@ -78,7 +78,7 @@ for (var p = 0; p < particleCount; p++) {
       pZ = Math.random() * 800 - 500,
       particle = new THREE.Vector3( pX, pY, pZ );
   particle.velocity = {};
-  particle.velocity.y = 0;
+  particle.velocity.y = Math.random() * 50;
   particles.vertices.push(
     particle
   );
@@ -101,7 +101,26 @@ Request animation frame loop function
 var counter = 0;
 var increase = Math.PI / 100 ;
 
-
+// Bouncy
+// for (var i = 0; i < pCount; i++) {
+// 	particle = particles.vertices[i];
+// 	var wave = counter + particle.velocity.y;
+// 	particle.velocity.y = Math.sin(wave);
+// 	particle.y += particle.velocity.y;
+//
+// 	if (particle.y > 400) {
+// 			particle.y = 200;
+// 			particle.velocity.y = 0;
+// 		}
+//
+//
+//
+// }
+// counter += increase;
+// if (counter >= 100) {
+// 	counter = 0;
+// }
+// ------------------------
 
 function animate() {
 	var pWaves;
@@ -114,9 +133,9 @@ function animate() {
 
 	for (var i = 0; i < pCount; i++) {
 		particle = particles.vertices[i];
-		var wave = Math.sin(counter);
-		particle.velocity.y = wave;
-		particle.y += particle.velocity.y;
+		// if (i === 1) console.log(particle.velocity.y);
+		var wave = counter + particle.velocity.y;
+		particles.vertices[i].y += Math.sin(wave);
 
 		if (particle.y > 400) {
 	      particle.y = 200;
