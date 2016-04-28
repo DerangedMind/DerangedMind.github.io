@@ -62,7 +62,7 @@ scene.add(floor);
 var particleCount = 1800,
     particles = new THREE.Geometry(),
     pMaterial = new THREE.PointCloudMaterial({
-      color: 0x555555,
+      color: 0xFEDDED,
       size: 16,
 			map: new THREE.ImageUtils.loadTexture(
 				"assets/eyeball.png"
@@ -100,21 +100,22 @@ function animate() {
   // particleSystem.rotation.y += 0.005;
   var particle = new THREE.Vector3();
   var pCount = particleCount;
-  while (pCount--) {
 
-    particle = particles.vertices[pCount];
+	for (var i = 0; i < pCount; i++) {
+		particle = particles.vertices[i];
+		var rot = i*0.1;
+		particle.velocity.y = 5 * Math.sin(i);
+		particle.y += particle.velocity.y;
+	}
 
-
-    if (particle.y < -200) {
-      particle.y = 200;
-      particle.velocity.y = 0;
-    }
-
-    // particle.velocity.y -= Math.random() * 0.5;
-
-    // particle.y += particle.velocity.y;
-
-  }
+  // while (pCount--) {
+  //   if (particle.y < -200) {
+  //     particle.y = 200;
+  //     particle.velocity.y = 0;
+  //   }
+  // particle.velocity.y -= Math.random() * 0.5;
+  // particle.y += particle.velocity.y;
+  // }
 
   particles.verticesNeedUpdate = true;
 
