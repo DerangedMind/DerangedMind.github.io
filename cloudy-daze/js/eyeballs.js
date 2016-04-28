@@ -92,19 +92,30 @@ particleSystem.sortParticles = true;
 
 scene.add( particleSystem );
 
+
+
 /*
 Request animation frame loop function
 */
+
+var counter = 0;
+var increase = Math.PI / 100 ;
+
+
+
 function animate() {
+	var pWaves;
+
 
   // particleSystem.rotation.y += 0.005;
   var particle = new THREE.Vector3();
   var pCount = particleCount;
 
+
 	for (var i = 0; i < pCount; i++) {
 		particle = particles.vertices[i];
-		var rot = i*0.1;
-		particle.velocity.y = Math.cos(1/i);
+		var wave = Math.sin(counter);
+		particle.velocity.y = wave;
 		particle.y += particle.velocity.y;
 
 		if (particle.y > 400) {
@@ -112,8 +123,13 @@ function animate() {
 	      particle.velocity.y = 0;
 	    }
 
-	}
 
+
+	}
+	counter += increase;
+	if (counter >= 100) {
+		counter = 0;
+	}
   // while (pCount--) {
   //   if (particle.y < -200) {
   //     particle.y = 200;
