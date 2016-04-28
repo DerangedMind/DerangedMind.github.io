@@ -39,26 +39,15 @@ var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
 var skyBox = new THREE.Mesh( skyGeometry, skyMaterial );
 scene.add( skyBox );
 
-// Generate random noise texture
-var noiseSize = 256;
-var size = noiseSize * noiseSize;
-var data = new Uint8Array( 4 * size );
-for ( var i = 0; i < size * 4; i ++ ) {
-    data[ i ] = Math.random() * 255;
-}
-var dt = new THREE.DataTexture( data, noiseSize, noiseSize, THREE.RGBAFormat );
-dt.wrapS = THREE.RepeatWrapping;
-dt.wrapT = THREE.RepeatWrapping;
-
-dt.needsUpdate = true;
+//floor
 
 var floor = new THREE.Mesh(
-  new THREE.PlaneBufferGeometry ( 255, 255, 1,1),
+  new THREE.PlaneBufferGeometry ( 10000, 10000, 1,1),
   new THREE.MeshBasicMaterial({
-		color: 0xFFFFFF,
+    color: 0xdead00,
     side: THREE.DoubleSide,
-    map: new THREE.ImageUtils.loadTexture(
-        dt
+		map: new THREE.ImageUtils.loadTexture(
+        "assets/floor.png"
       ),
     blending: THREE.AdditiveBlending
   }));
@@ -68,20 +57,20 @@ floor.position.y = -100;
 
 scene.add(floor);
 
+//particles
 
 var particleCount = 1800,
     particles = new THREE.Geometry(),
     pMaterial = new THREE.PointCloudMaterial({
-      color: 0xFFFFFF,
-      size: 10,
-      map: new THREE.ImageUtils.loadTexture(
-          "assets/raindrop.png"
-        ),
-      blending: THREE.AdditiveBlending,
+      color: 0x555555,
+      size: 16,
+			map: new THREE.ImageUtils.loadTexture(
+				"assets/eyeball.png"
+			),
+      // blending: THREE.AdditiveBlending,
       transparent:true
 
     });
-
 
 for (var p = 0; p < particleCount; p++) {
   var pX = Math.random() * 800 - 500,
@@ -108,7 +97,7 @@ Request animation frame loop function
 */
 function animate() {
 
-  particleSystem.rotation.y += 0.005;
+  // particleSystem.rotation.y += 0.005;
   var particle = new THREE.Vector3();
   var pCount = particleCount;
   while (pCount--) {
@@ -121,9 +110,9 @@ function animate() {
       particle.velocity.y = 0;
     }
 
-    particle.velocity.y -= Math.random() * 0.5;
+    // particle.velocity.y -= Math.random() * 0.5;
 
-    particle.y += particle.velocity.y;
+    // particle.y += particle.velocity.y;
 
   }
 
