@@ -104,8 +104,14 @@ function animate() {
 	for (var i = 0; i < pCount; i++) {
 		particle = particles.vertices[i];
 		var rot = i*0.1;
-		particle.velocity.y = 5 * Math.sin(i);
+		particle.velocity.y = Math.cos(1/i);
 		particle.y += particle.velocity.y;
+
+		if (particle.y > 400) {
+	      particle.y = 200;
+	      particle.velocity.y = 0;
+	    }
+
 	}
 
   // while (pCount--) {
