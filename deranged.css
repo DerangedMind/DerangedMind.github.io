@@ -1,50 +1,53 @@
+.black {
+  background-color: black;
+}
+
+
 body {
     background-color: #303030;
 }
 
-.boxout {
-  width:963px;
-  display: block;
-  background-color: black;
-  overflow: hidden;
-  margin: 183px auto;
-  padding-left: 48px;
-  padding-right: 96px;
 
-}
-
-.title {
-  margin-top: 48px;
-  margin-left: 48px;
-  float:left;
-
-}
-
-.img-title {
-  width: 256px;
-  height: 256px;
-  padding: 36px 64px 36px 36px;
-  float:left;
-}
 
 .h1-title-top {
-  position: relative;
   font: 64px "Lucida Console";
   color: gray;
   letter-spacing: 22px;
-  margin: 22px auto;
-
 }
 
 .h2-title-bottom {
-  position: relative;
   font: 36px  "Monaco";
   color: gray;
   letter-spacing: 38px;
 }
 
 .divider {
-  position: relative;
+
   border: 1px solid gray;
   width: 500px;
+}
+
+
+@media only screen and (max-width:768px) {
+
+    .h1-title-top {
+      font-size: 48px;
+    }
+    .h2-title-bottom {
+      font-size: 24px;
+    }
+
+}
+
+@media only screen and (max-width:428px) {
+
+    .h1-title-top {
+      font-size: 36px;
+    }
+    .h2-title-bottom {
+      font-size: 18px;
+    }
+    .divider {
+      width: 375px;
+    }
 }
