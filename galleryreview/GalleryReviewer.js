@@ -35,7 +35,7 @@ var gallerySize = 42;
 
     var imgGallery = document.getElementsByClassName('img-box');
 
-    for(i = 0; i < imgGallery.children.length; i++){
+    for(var i = 0; i < imgGallery.children; i++){
       imgGallery.children[i].addEventListener('click', selectPic)
     }
 
