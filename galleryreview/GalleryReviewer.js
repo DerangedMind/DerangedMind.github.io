@@ -83,7 +83,6 @@ var gallerySize = 42;
       // create function to verify that toggle is checked and link is inactive.
       $(u.target).toggleClass("selected");
       console.log('clicking');
-      alert(Array.prototype.indexOf(u));
 
     }
 
