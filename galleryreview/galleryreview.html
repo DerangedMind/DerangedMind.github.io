@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>Gallery Review</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="GalleryReviewer.js"></script>
+
+  <style>
+
+  body { background-color: #444; }
+
+  .gallery-container {
+
+  }
+
+  .jumbotron {
+    padding: 10px 20px;
+  }
+
+  .nobullets {
+    list-style-type: none;
+    list-style: none;
+  }
+  .selected {
+    -webkit-filter: brightness(50%);
+    border: 15px solid #622;
+  }
+  .targeted {
+    box-sizing: border-box;
+    border: 15px solid #d55;
+  }
+
+  .img-box {
+
+     width: 300px;
+     height: 300px;
+
+     background-color: red;
+
+     vertical-align: center;
+     float: left;
+     margin-left: 20px;
+     margin-top: 60px;
+  }
+
+  .img-box-contents {
+    width: 100%;
+    vertical-align: middle;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 75px;
+
+  }
+
+  .row-start {
+    margin-left: 0;
+  }
+
+  .toolbox {
+    margin: 5px;
+    width: 300px;
+    height: 600px;
+    background-color: #222;
+    position: fixed;
+  }
+
+  .toolbox h3, .toolbox h4{
+    color: #ddd;
+    text-align: center;
+  }
+
+  .top-spacer {
+    padding-top: 32px;
+  }
+
+  .btn-box {
+    margin-top:20px;
+    width: 100%;
+    height: 50px;
+  }
+
+  .btn-box-half-width {
+    width: 50%;
+    height: 100%;
+  }
+
+  .filter-box {
+
+    text-align: center;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%
+  }
+
+  .filter-enabled {
+    background-color: #a00;
+  }
+
+  .filter-disabled {
+    background-color: #777;
+  }
+
+  .trend-checkbox {
+    text-align: right;
+    font-size: 24px;
+    color: #ddd;
+  }
+
+  </style>
+
+
+</header>
+<body>
+<div class="jumbotron">
+  <h1>Gallery Review</h1>
+</div>
+<div class="col-md-9 gallery-container">
+  <ul class="nobullets">
+
+  </ul>
+
+</div>
+<div class="col-md-3">
+  <div class="toolbox">
+  <div></div>
+    <h3 class="top-spacer">Toolbox</h3>
+    <div class="btn-group btn-box" role="group" aria-label="...">
+      <button type="button" class="btn btn-default btn-box-half-width">
+        <span class="glyphicon glyphicon-lock"></span>
+        Lock
+      </button>
+
+      <button type="button" class="btn btn-default btn-box-half-width">
+        <span class="glyphicon glyphicon-trash"></span>
+        Delete
+      </button>
+    </div> <!-- end btn-group -->
+    <h4 class="top-spacer">Filter by:</h4>
+      <ul class="list-group filter-box">
+        <li class="list-group-item filter-enabled">
+          <span class="glyphicon glyphicon-eye-open"></span>
+          Public
+        </li>
+        <li class="list-group-item filter-enabled">
+          <span class="glyphicon glyphicon-eye-open"></span>
+          Private
+        </li>
+      </ul>
+      <ul class="list-group filter-box">
+        <li class="list-group-item filter-disabled">
+          <span class="glyphicon glyphicon-eye-close"></span>
+          Deleted
+        </li>
+      </ul>
+
+      <hr/>
+      <form action="">
+        <p class="trend-checkbox">Trending <input class="" type="checkbox"></p>
+      </form>
+  </div> <!-- end Toolbox -->
+</div> <!-- end column -->
+
+</body>
+</html>
