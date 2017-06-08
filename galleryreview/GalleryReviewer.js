@@ -10,9 +10,25 @@ var gallerySize = 42;
     // draw gallery
     for (var i = 0; i < gallerySize; i++) {
 
-      var picContainer = $('.nobullets').append(
-        '<li><img class="img-box" src="cupcake.jpg"/></li>'
+      if (i % 4 === 0) {
+        var picContainer = $('.nobullets').append(
+        '<li><img class="img-box" src="john_hogtied.jpg"/></li>'
     );
+      }
+      else if (i % 3 === 0) {
+        var picContainer = $('.nobullets').append(
+          '<li><img class="img-box" src="cupcake.jpg"/></li>'
+        );
+      }
+      else {
+       var picContainer = $('.nobullets').append(
+        '<li><img class="img-box" src="peppermint.jpg"/></li>'
+        );
+      }
+
+
+
+
 
     // Every 3rd img is the first img of a row.
 
