@@ -5,10 +5,25 @@
 
   }
 
+  .badge-danger {
+  background-color: #d43f3a;
+  }
+
   .jumbotron {
     padding: 10px 20px;
     margin-bottom: 0;
   }
+
+  .jumbotron h1 {
+    display: inline-block;
+
+  }
+
+  .jumbotron h2 {
+    display: inline-block;
+    text-decoration: underline;
+  }
+
 
   .nobullets {
     list-style-type: none;
