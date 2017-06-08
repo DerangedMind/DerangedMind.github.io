@@ -105,7 +105,7 @@ var gallerySize = 42;
     // scrollTo: Smooth scrolls to target id
     function scrollTo(target) {
       var offset;
-      var scrollSpeed = 0;
+      var scrollSpeed = 500;
         var wheight = $(window).height();
         offset = $(target).offset().top - $(window).height() / 2 + $('.targeted')[0].height/2;
 
