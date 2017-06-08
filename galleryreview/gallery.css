@@ -1,0 +1,103 @@
+
+  body { background-color: #444; }
+
+  .gallery-container {
+
+  }
+
+  .jumbotron {
+    padding: 10px 20px;
+    margin-bottom: 0;
+  }
+
+  .nobullets {
+    list-style-type: none;
+    list-style: none;
+  }
+  .selected {
+    box-sizing: border-box;
+    -webkit-filter: brightness(50%);
+    border: 15px solid #622;
+  }
+  .targeted {
+    box-sizing: border-box;
+    border: 15px solid rgba(255,50,50,.75);
+
+  }
+
+  .img-box {
+
+     width: 300px;
+     height: 300px;
+
+     background-color: red;
+
+     vertical-align: center;
+     float: left;
+     margin-left: 20px;
+     margin-top: 60px;
+  }
+
+  .img-box-contents {
+    width: 100%;
+    vertical-align: middle;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 75px;
+
+  }
+
+  .row-start {
+    margin-left: 0;
+  }
+
+  .toolbox {
+    margin: 5px;
+    width: 300px;
+    height: 600px;
+    background-color: #222;
+    position: fixed;
+  }
+
+  .toolbox h3, .toolbox h4{
+    color: #ddd;
+    text-align: center;
+  }
+
+  .top-spacer {
+    padding-top: 32px;
+  }
+
+  .btn-box {
+    margin-top:20px;
+    width: 100%;
+    height: 50px;
+  }
+
+  .btn-box-half-width {
+    width: 50%;
+    height: 100%;
+  }
+
+  .filter-box {
+
+    text-align: center;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%
+  }
+
+  .filter-enabled {
+    background-color: #a00;
+  }
+
+  .filter-disabled {
+    background-color: #777;
+  }
+
+  .trend-checkbox {
+    text-align: right;
+    font-size: 24px;
+    color: #ddd;
+  }
