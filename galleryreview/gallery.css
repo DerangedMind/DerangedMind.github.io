@@ -25,6 +25,7 @@
 
   .username-text {
     text-decoration: underline;
+    color: #700;
   }
 
   .float-r {
@@ -74,6 +75,18 @@
 
   }
 
+  .al-c {
+    text-align: center;
+  }
+
+  .al-r {
+    text-align: right;
+  }
+
+  .al-l {
+    text-align: left;
+  }
+
   .row-start {
     margin-left: 0;
   }
@@ -110,11 +123,56 @@
     height: 50px;
   }
 
-  .btn-box-half-width {
-    width: 50%;
+  .half-width {
+    width: 45%;
     height: 100%;
   }
-  .btn-box-full-width {
+
+  .btn {
+    margin-left:2%;
+    margin-right:2%;
+    border-color: #000;
+    border-radius: 3px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .btn-fl-cta {
+    background-color: #900;
+    color: #ddd;
+  }
+  .btn-fl-cta:hover {
+    background-color: #d00;
+    color: #ddd;
+
+  }
+
+  .btn-fl-default {
+    background-color: #333;
+    color: #ddd;
+  }
+  .btn-fl-default:hover, .btn-fl-default:focus:hover {
+    background-color: #777;
+    color: #ddd;
+  }
+
+  .btn-fl-default.active {
+    background-color: #555;
+    color: #ddd;
+
+  }
+
+  .btn-fl-default:focus {
+    background-color: #444;
+    color: #ddd;
+    outline: none !important;
+  }
+
+  .btn-fl-default:target {
+    background-color: #444;
+    color: #ddd;
+  }
+  .full-width {
     width: 100%;
     height: 100%;
   }
@@ -152,6 +210,18 @@
     display: block;
     width: 75%;
     margin: 0 auto;
+  }
+
+  .center-50 {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+
+  .active-report-pic {
+    max-height: 500px;
+    width: 100%;
   }
 
   .active-report-caption {

@@ -3,8 +3,9 @@
 <head>
   <title>Gallery Review</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
   <script src="GalleryReviewer.js"></script>
 
   <link rel="stylesheet" href="gallery.css">
@@ -12,10 +13,6 @@
 
 </head>
 <body>
-<div class="jumbotron member-name">
-  <h1>Gallery Review</h1> for <h2><a href="https://fetlife.com/PrincessPeach72">PrincessPeach72</a></h2>
-</div>
-
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -34,61 +31,67 @@
     </div>
   </div>
 </nav>
-<div class="row">
-  <div class="col-md-9 gallery-container">
-    <ul class="nobullets">
 
-    </ul>
-
+<div class="row sm-margin-top top-spacer">
+  <div class="col-md-8">
   </div>
-  <div class="col-md-3">
 
-  <div class="toolbox">
-    <div>
+  <div class="row">
+
+    <div class="col-md-9 gallery-container">
+      <div class="member-name al-c">
+        <h2 class="username-text"><a href="https://fetlife.com/PrincessPeach72">PrincessPeach72</a></h2>
+        <h4 class="al-r">Gallery Review</h4>
+      </div>
+      <ul class="nobullets sm-margin-top">
+      </ul>
+    </div>
 
 
+    <div class="col-md-3">
+      <div class="toolbox">
 
-    <h3 class="top-spacer">Toolbox</h3>
-    <div class="btn-group btn-box" role="group" aria-label="...">
-      <button type="button" class="btn btn-default btn-box-half-width">
-        <span class="glyphicon glyphicon-lock"></span>
-        Lock
-      </button>
-
-      <button type="button" class="btn btn-default btn-box-half-width">
-        <span class="glyphicon glyphicon-trash"></span>
-        Delete
-      </button>
-    </div> <!-- end btn-group -->
-    <h4 class="top-spacer">Filter by:</h4>
-      <ul class="list-group filter-box">
-        <li class="list-group-item filter-disabled">
+        <h3 class="top-spacer">Toolbox</h3>
+        <div class="btn-group btn-box" role="group" aria-label="...">
+          <button type="button" class="btn btn-default btn-box-half-width">
+            <span class="glyphicon glyphicon-lock"></span>
+            Lock
+          </button>
+          <button type="button" class="btn btn-default btn-box-half-width">
+            <span class="glyphicon glyphicon-trash"></span>
+            Delete
+          </button>
+        </div> <!-- end btn-group -->
+        <h4 class="top-spacer">Filter by:</h4>
+        <ul class="list-group filter-box">
+          <li class="list-group-item filter-disabled">
           <span class="glyphicon glyphicon-eye-close"></span>
           Reported Images
-        </li>
-      </ul>
+          </li>
+        </ul>
 
-      <ul class="list-group filter-box">
-        <li class="list-group-item filter-enabled">
+        <ul class="list-group filter-box">
+          <li class="list-group-item filter-enabled">
           <span class="glyphicon glyphicon-eye-open"></span>
-          Public
-        </li>
-        <li class="list-group-item filter-enabled">
-          <span class="glyphicon glyphicon-eye-open"></span>
-          Private
-        </li>
-      </ul>
+            Public
+          </li>
+          <li class="list-group-item filter-enabled">
+            <span class="glyphicon glyphicon-eye-open"></span>
+            Private
+          </li>
+        </ul>
 
+        <hr/>
+        <ul class="list-group filter-box">
+          <li class="list-group-item filter-enabled">
+            <span class="glyphicon glyphicon-eye-open"></span>
+            Trending
+          </li>
+        </ul>
 
-      <hr/>
-      <ul class="list-group filter-box">
-        <li class="list-group-item filter-enabled">
-          <span class="glyphicon glyphicon-eye-open"></span>
-          Trending
-        </li>
-      </ul>
-  </div> <!-- end Toolbox -->
-</div> <!-- end column -->
+      </div> <!-- end Toolbox -->
+    </div>   <!-- end column -->
+  </div>
 </div>
 </body>
 </html>
