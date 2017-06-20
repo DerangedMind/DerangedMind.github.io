@@ -30,14 +30,17 @@ var gallerySize = 42;
 
 
 
-    // Every 3rd img is the first img of a row.
+      // Every 3rd img is the first img of a row.
 
-    if (i % 3 === 1 || i === 0) {
-      $('li:nth-child('+i+') img').toggleClass('row-start')
-    }
-      if (i === 0) {
+      if (i % 3 === 1 || i === 0) {
+        $('li:nth-child('+i+') img').toggleClass('row-start')
       }
+      if (i === 1 || i === 2) {
+        $('li:nth-child('+i+') img').toggleClass('reported');
+      }
+
       galleryArray.push(picContainer)
+
 
       //END for
     }
