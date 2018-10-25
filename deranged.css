@@ -2,52 +2,53 @@
   background-color: black;
 }
 
-
 body {
     background-color: #303030;
 }
 
-
-
 .h1-title-top {
-  font: 64px "Lucida Console";
+  font: 4em "Lucida Console";
   color: gray;
-  letter-spacing: 22px;
+  letter-spacing: .4em;
+  margin-left: .2em;
+  margin-right: -.2em; /* removes space after last char */
+  width: 100%;
+  border-bottom: 1px solid gray;
+  text-align: center;
 }
 
 .h2-title-bottom {
-  font: 36px  "Monaco";
+  font: 2em  "Monaco";
   color: gray;
-  letter-spacing: 38px;
+  letter-spacing: 1em;
+  margin-left: .5em;
+  margin-right: -.5em;
+  text-align: center;
 }
 
 .divider {
-
   border: 1px solid gray;
   width: 500px;
 }
 
-
-@media only screen and (max-width:768px) {
-
-    .h1-title-top {
-      font-size: 48px;
-    }
-    .h2-title-bottom {
-      font-size: 24px;
-    }
+.logo-pic {
 
 }
 
-@media only screen and (max-width:428px) {
-
+@media only screen and (max-width:768px) {
     .h1-title-top {
-      font-size: 36px;
+      font-size: 2.8em;
     }
     .h2-title-bottom {
-      font-size: 18px;
+      font-size: 1.75em;
     }
-    .divider {
-      width: 375px;
+}
+
+@media only screen and (max-width:428px) {
+    .h1-title-top {
+      font-size: 2.5em;
+    }
+    .h2-title-bottom {
+      font-size: 1.5em;
     }
 }
