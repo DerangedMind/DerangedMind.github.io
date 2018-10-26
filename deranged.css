@@ -1,38 +1,23 @@
-.black {
-  background-color: black;
-}
-
 body {
     background-color: #303030;
+}
+
+.lucida {
+  font-family: "Lucida Console";
 }
 
 .h1-title-top {
   font: 4em "Lucida Console";
   color: gray;
   letter-spacing: .4em;
-  margin-left: .2em;
-  margin-right: -.2em; /* removes space after last char */
-  width: 100%;
-  border-bottom: 1px solid gray;
-  text-align: center;
+  margin-right: -.4em; /* removes trailing letter spacing */
 }
 
 .h2-title-bottom {
   font: 2em  "Monaco";
   color: gray;
   letter-spacing: 1em;
-  margin-left: .5em;
-  margin-right: -.5em;
-  text-align: center;
-}
-
-.divider {
-  border: 1px solid gray;
-  width: 500px;
-}
-
-.logo-pic {
-
+  margin-right: -1em;
 }
 
 @media only screen and (max-width:768px) {
